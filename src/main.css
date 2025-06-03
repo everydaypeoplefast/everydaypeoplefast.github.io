@@ -1,0 +1,35 @@
+@layer theme, base, components, utilities;
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/preflight.css" layer(base);
+@import "tailwindcss/utilities.css" layer(utilities);
+
+@theme {
+  --font-barlowc: "Barlow Condensed", sans-serif;
+  --font-barlow: "Barlow", sans-serif;
+  --font-lora: "Lora", serif;
+
+  --color-red: #f04848;
+  --color-yellow: #f6c914;
+  --color-green: #2a9e90;
+  --color-blue: #284755;
+
+  --text-subheading: 1.25rem;
+  --text-subheading--font-weight: 900;
+  --text-subheading--letter-spacing: 0.05em;
+
+  --text-heading: 3rem;
+  --text-heading--line-height: 1.2;
+  --text-heading--font-weight: 700;
+  --text-heading--letter-spacing: 0.01em;
+
+  --text-body: 1rem;
+  --text-body--line-height: 1.66;
+  --text-body--font-weight: 500;
+}
+
+@utility button {
+  @apply px-4 py-2 rounded-md bg-blue text-white hover:bg-red focus:bg-red hover:text-blue focus:text-blue
+  cursor-pointer
+  font-barlowc font-bold uppercase text-subheading
+  transition-all duration-300;
+}
